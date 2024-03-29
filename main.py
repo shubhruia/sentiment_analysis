@@ -3,18 +3,18 @@ import pandas as pd
 import streamlit as st
 import cleantext
 
-# Function to analyze text sentiment
+# Function to analyze the sentiment of a given text
 def analyze_text(text):
     blob = TextBlob(text)
     polarity = round(blob.sentiment.polarity, 2)
     subjectivity = round(blob.sentiment.subjectivity, 2)
     return polarity, subjectivity
 
-# Function to clean text
+# Function to clean text by removing unwanted elements
 def clean_text(text):
     return cleantext.clean(text, clean_all=False, extra_spaces=True, stopwords=True, lowercase=True, numbers=True, punct=True)
 
-# Function to score sentiment
+# Function to assign sentiment labels (Positive, Negative, Neutral) based on polarity scores
 def score_sentiment(x):
     if x >= 0.5:
         return 'Positive'
@@ -23,26 +23,29 @@ def score_sentiment(x):
     else:
         return 'Neutral'
 
-# Function to analyze CSV file
+# Function to analyze a CSV file containing tweets
 def analyze_csv(file):
     df = pd.read_csv(file)
     df['score'] = df['tweet'].apply(lambda x: TextBlob(x).sentiment.polarity)
     df['analysis'] = df['score'].apply(score_sentiment)
     return df
 
-# User Interface
+# Create the Streamlit web app interface
 st.title('Sentiment Analyzer')
 
+# Text input for single text analysis
 text = st.text_input('Type or paste the text you want to analyze: ')
 if text:
     polarity, subjectivity = analyze_text(text)
     st.write('Polarity:', polarity)
     st.write('Subjectivity:', subjectivity)
 
+# Text input for text cleaning
 pre = st.text_input('Type or paste the text you want to clean: ')
 if pre:
     st.write(clean_text(pre))
 
+# File uploader for CSV analysis
 upload = st.file_uploader('Upload File')
 
 if upload:
