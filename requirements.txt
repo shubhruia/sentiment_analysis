@@ -1,0 +1,4 @@
+textblob
+pandas
+streamlit
+cleantext
