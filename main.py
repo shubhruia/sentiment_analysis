@@ -18,7 +18,7 @@ def clean_text(text):
 def score_sentiment(x):
     if x >= 0.5:
         return 'Positive'
-    elif x <= 0.5:
+    elif x <= -0.5:
         return 'Negative'
     else:
         return 'Neutral'
