@@ -35,10 +35,11 @@ streamlit run main.py
 
 ## Dependencies
 
-- [TextBlob](https://textblob.readthedocs.io/en/dev/): Used for natural language processing tasks, including sentiment analysis.
-- [pandas](https://pandas.pydata.org/): Library for data manipulation and analysis.
-- [streamlit](https://streamlit.io/): Open-source framework for building data-driven web apps.
-- [cleantext](https://pypi.org/project/cleantext/): Library for cleaning and preprocessing text data.
+- [pandas](https://pandas.pydata.org/): For data manipulation and analysis.
+- [streamlit](https://streamlit.io/): For building the web app interface.
+- [matplotlib](https://matplotlib.org/): For creating visualizations.
+- [wordcloud](https://amueller.github.io/word_cloud/): For generating word clouds.
+- [vadersentiment](https://pypi.org/project/vaderSentiment/): For sentiment analysis.
 
 ### Demo link
 
