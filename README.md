@@ -18,6 +18,8 @@ A web application for analyzing the sentiment of text using VADER. This app allo
 
 **Try the live demo of this application [here](https://sentimentanalysistweets.streamlit.app/).**
 
+**Sample CSV Files**: Two sample CSV files are provided for users to try out the sentiment analysis functionality. Upload them via the CSV file uploader to see how the app works with real data.
+
 ## Installation
 
 1. **Clone the repository**:
