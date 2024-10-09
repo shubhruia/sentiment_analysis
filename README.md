@@ -24,7 +24,7 @@ A web application for analyzing the sentiment of text using VADER. This app allo
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/sentiment-analysis.git
+   git clone https://github.com/shubhruia/sentiment-analysis.git
    ```
 
 2. **Install the required Python packages**:
@@ -38,7 +38,6 @@ A web application for analyzing the sentiment of text using VADER. This app allo
 ```bash
 streamlit run main.py
 ```
-
 #### 2. Text Analysis:
 
 - Navigate to the Text Analysis section.
