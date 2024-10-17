@@ -1,24 +1,45 @@
 # Sentiment Analyzer
 
-A web application for analyzing the sentiment of text using VADER. This app allows users to input text or upload CSV files containing tweets, perform sentiment analysis, and visualize the results through various charts and graphs.
+A powerful web application for analyzing the sentiment of text using VADER (Valence Aware Dictionary and sEntiment Reasoner). This Streamlit-based app enables users to input text or upload CSV files containing tweets, perform sentiment analysis, and visualize the results through various interactive charts and graphs.
 
 ## Features
 
-- **Text Analysis**: Input text for quick sentiment analysis.
-- **Text Cleaning**: Clean input text by removing punctuation and extra spaces.
-- **CSV File Upload**: Upload CSV files to analyze multiple tweets at once.
-- **Sentiment Analysis**: Analyze sentiment using VADER and classify it as Positive, Negative, or Neutral.
+- **Text Analysis**: 
+  - Input individual text snippets for quick sentiment analysis.
+  - View polarity scores and sentiment classification (Positive, Negative, or Neutral).
+
+- **Text Cleaning**: 
+  - Clean input text by removing punctuation and extra spaces.
+  - Compare original and cleaned text side-by-side.
+
+- **CSV File Upload**: 
+  - Upload CSV files containing multiple tweets for bulk analysis.
+  - Analyze sentiment for each tweet in the dataset.
+
+- **Sentiment Analysis**: 
+  - Utilize VADER for accurate sentiment analysis.
+  - Classify sentiment as Positive, Negative, or Neutral based on polarity scores.
+
 - **Visualizations**:
-  - Bar chart of sentiment counts.
-  - Pie chart of sentiment distribution.
-  - Word cloud of the most common words in the tweets.
-  - Histogram of polarity scores.
+  - Bar chart: Display counts of different sentiment categories.
+  - Pie chart: Illustrate the distribution of sentiments.
+  - Word cloud: Showcase the most common words in the analyzed tweets.
+  - Histogram: Visualize the distribution of polarity scores.
+
+- **Data Export**: 
+  - Download processed data with sentiment analysis results as a CSV file.
 
 ## Demo
 
 **Try the live demo of this application [here](https://sentimentanalysistweets.streamlit.app/).**
 
-**Sample CSV Files**: Two sample CSV files are provided for users to try out the sentiment analysis functionality. Upload them via the CSV file uploader to see how the app works with real data.
+## Sample Data
+
+To help you get started, we've provided two sample CSV files:
+1. `sample_tweets_1.csv`
+2. `sample_tweets_2.csv`
+
+Upload these files via the CSV file uploader in the app to see how it handles real-world data.
 
 ## Installation
 
@@ -34,27 +55,36 @@ A web application for analyzing the sentiment of text using VADER. This app allo
 
 ## Usage
 
-#### 1. Run the App: Launch the app by running the following command in your terminal:
-```bash
-streamlit run main.py
-```
-#### 2. Text Analysis:
+1. **Launch the App**: 
+   Run the following command in your terminal:
+   ```bash
+   streamlit run main.py
+   ```
 
-- Navigate to the Text Analysis section.
-- Type or paste the text you want to analyze. The app will display the polarity score and sentiment classification.
+2. **Text Analysis**:
+   - Navigate to the "Text Analysis" section.
+   - Enter or paste the text you want to analyze.
+   - The app will display the polarity score and sentiment classification.
 
-#### 3. Text Cleaning:
+3. **Text Cleaning**:
+   - Go to the "Text Cleaning" section.
+   - Paste your text to see the cleaned version with punctuation and extra spaces removed.
 
-- In the Text Cleaning section, paste text to see the cleaned version.
+4. **CSV Sentiment Analysis**:
+   - Upload a CSV file containing a column labeled "tweet".
+   - The app will analyze the sentiment of each tweet and present the results.
+   - After analysis, you can download the processed data as a CSV file.
 
-#### 4. CSV Sentiment Analysis:
+5. **Explore Visual Results**:
+   - Interact with the generated charts and word clouds to gain insights into the sentiment distribution and common themes in your data.
 
-- Upload a CSV file containing a column labeled tweet. The app will analyze each tweet's sentiment and present the results.
-- After analysis, download the processed data as a CSV file.
+## Dependencies
 
-#### 5. Visual Results:
-
-- The app provides visual representations of sentiment analysis results, including charts and word clouds.
+- **[pandas](https://pandas.pydata.org/)**: Data manipulation and analysis
+- **[streamlit](https://streamlit.io/)**: Web app interface
+- **[matplotlib](https://matplotlib.org/)**: Creating visualizations
+- **[wordcloud](https://amueller.github.io/word_cloud/)**: Generating word clouds
+- **[vaderSentiment](https://github.com/cjhutto/vaderSentiment)**: Sentiment analysis
 
 ## Contribution
 
@@ -64,10 +94,7 @@ Feel free to submit issues or pull requests if you find bugs or have suggestions
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Resources
+## Acknowledgements
 
-- **[pandas](https://pandas.pydata.org/)**: For data manipulation and analysis.
-- **[streamlit](https://streamlit.io/)**: For building the web app interface.
-- **[matplotlib](https://matplotlib.org/)**: For creating visualizations.
-- **[wordcloud](https://amueller.github.io/word_cloud/)**: For generating word clouds.
-- **[vadersentiment](https://github.com/cjhutto/vaderSentiment)**: For sentiment analysis.
+- VADER sentiment analysis tool creators and contributors
+- Streamlit team for their excellent framework
